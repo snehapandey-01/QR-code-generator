@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background: linear-gradient(135deg, #f0f4f8, #e0e7ef); /* Soft gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Heading styling */
+.hy {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    width: 100%;
+    max-width: 400px; /* Limit the max width for a better look */
+    padding: 30px;
+    background: #ffffff; /* White background for container */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    text-align: center;
+    overflow: hidden; /* Hide any overflow content */
+}
+
+/* Paragraph styling */
+.container p {
+    font-weight: 600;
+    font-size: 18px;
+    color: #555; /* Slightly lighter color for better contrast */
+    margin-bottom: 15px;
+}
+
+/* Input field styling */
+.container input {
+    width: calc(100% - 20px); /* Adjust width to fit inside padding */
+    height: 45px; /* Adjust height */
+    border: 2px solid #ddd; /* Light border color */
+    outline: none;
+    padding: 0 15px;
+    margin: 10px 0 20px;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.container input:focus {
+    border-color: #494eea; /* Highlight border on focus */
+}
+
+/* Button styling */
+.container button {
+    width: calc(100% - 20px); /* Adjust width to fit inside padding */
+    height: 50px;
+    background: #494eea;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.container button:hover {
+    background: #3e40c7; /* Slightly darker blue */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Image box styling */
+#imgbox {
+    width: 100%;
+    max-height: 300px; /* Limit the height */
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    border-radius: 10px;
+    border: 1px solid #ddd; /* Light border color */
+    background: #f9f9f9; /* Light background for image box */
+    padding: 10px; /* Padding inside the box */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+#imgbox img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    object-fit: contain; /* Make sure the image scales without stretching */
+}
+
+/* Adjusting the image box when showing the image */
+#imgbox.show-img {
+    max-height: 300px; /* Adjust as needed */
+    margin: 20px 0;
+}
+
+/* Error animation */
+.error {
+    animation: shake 0.6s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
